@@ -58,6 +58,7 @@ export function EditJob(props: { new_?: boolean }) {
         customerName,
         description,
         images,
+        triageTime: Date.now(),
       });
       reset();
     } else if (job !== undefined) {
