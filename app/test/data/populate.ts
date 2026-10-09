@@ -23,6 +23,7 @@ Bottom text`,
     { type: "image/jpeg", blobId: "img2" },
     { type: "image/jpeg", blobId: "img3" },
   ],
+  triageTime: Date.now(),
 };
 
 const newJob2: NewJob = {
@@ -33,6 +34,7 @@ const newJob2: NewJob = {
     { type: "image/jpeg", blobId: "img4" },
     { type: "image/jpeg", blobId: "img5" },
   ],
+  triageTime: Date.now(),
 };
 
 async function main() {

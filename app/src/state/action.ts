@@ -13,7 +13,7 @@ export type NewJob = {
   customerName: string;
   description: string;
   images: Image[];
-  triageTime: number;
+  triageTime?: number;
 };
 
 export type ChangeJobStatus = {

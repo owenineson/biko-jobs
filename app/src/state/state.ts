@@ -8,7 +8,7 @@ export type Job = {
   description: string;
   status: (typeof allStatuses)[number];
   images: Image[];
-  triageTime: number;
+  triageTime?: number;
 };
 export type Image = {
   type: string;

@@ -65,7 +65,14 @@ export function JobDetail() {
               <h3>{job.customerName}</h3>
             </div>
             <div>
-              <h3>#{jobNumber}</h3>
+              <h3>
+                {job.triageTime !== undefined && (
+                  <span className="badge text-bg-secondary">
+                    #{job.number}{" "}
+                    {new Date(job.triageTime).toLocaleString(undefined, { timeStyle: "short" })}
+                  </span>
+                )}
+              </h3>
             </div>
           </div>
           <hr />

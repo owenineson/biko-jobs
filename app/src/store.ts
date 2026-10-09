@@ -23,7 +23,6 @@ export class Store {
     this.client.subscribeEvents((event) => {
       this.dispatch(event as Action);
     });
-    this.dispatch({ type: "set current session", sessionId: session });
   }
 
   async refreshState() {

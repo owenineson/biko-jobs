@@ -62,10 +62,17 @@ function Column(props: { title: string; status: Job["status"] }) {
             </div>
             <div className="col">
               <div className="">
-                <h5 className="mb-1 mt-1">{job.customerName} #{job.number}</h5>
+                <h5 className="mb-1 mt-1">
+                  {job.customerName}{" "}
+                  {job.triageTime !== undefined && (
+                    <span className="badge text-bg-secondary">
+                      #{job.number}{" "}
+                      {new Date(job.triageTime).toLocaleString(undefined, { timeStyle: "short" })}
+                    </span>
+                  )}
+                </h5>
               </div>
               <div className="job-description">{job.description.replace(/\n/g, " | ")}</div>
-              <small className="text-body-second">{new Date(job.triageTime).toLocaleString(undefined, { timeStyle: "short"})}</small>
             </div>
           </div>
         </a>
